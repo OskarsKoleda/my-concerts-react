@@ -17,20 +17,41 @@ const initialState = {
       date: '21.10.2015'
 
     },
-    // {
-    //   id: 3,
-    //   name: 'Slipknot',
-    //   place: 'Vilnius',
-    //   price: 43,
-    //   date: '11.05.2015'
-    // },
-    // {
-    //   id: 4,
-    //   name: 'Testament',
-    //   place: 'Riga',
-    //   price: 43,
-    //   date: '01.04.2015'
-    // }
+    {
+      id: 3,
+      name: 'Slipknot',
+      place: 'Vilnius',
+      price: 43,
+      date: '11.05.2015'
+    },
+    {
+      id: 4,
+      name: 'Testament',
+      place: 'Riga',
+      price: 43,
+      date: '01.04.2015'
+    },
+    {
+      id: 5,
+      name: 'Eluveitie',
+      place: 'Riga',
+      price: 20,
+      date: '11.05.2015'
+    },
+    {
+      id: 6,
+      name: 'Mystic Festival',
+      place: 'Krakow',
+      price: 90,
+      date: '24.06.2019'
+    },
+    {
+      id: 7,
+      name: 'Neuromonakh Feofan',
+      place: 'Krakow',
+      price: 15,
+      date: '20.01.2019'
+    }
   ]
 };
 

@@ -1,11 +1,11 @@
-import React from 'react';
-import NavigationItem from './NavigationItem/NavigationItem';
+import React from "react";
+import NavigationItem from "./NavigationItem/NavigationItem";
 
 const navigationItems = props => {
   return (
     <nav className="sidebar">
       <ul className="side-nav">
-        <NavigationItem>
+        <NavigationItem classes={"side-nav__item--active"}>  
           <span>Books</span>
         </NavigationItem>
         <NavigationItem>
@@ -19,7 +19,8 @@ const navigationItems = props => {
         </NavigationItem>
       </ul>
       <div className="legal">
-        &copy; 2020 by Rogopop. All rights are not reserved.
+        <span className="copyleft">&copy;</span> 2020 by Rogopop. All rights are
+        not reserved.
       </div>
     </nav>
   );

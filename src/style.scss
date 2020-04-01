@@ -7,53 +7,81 @@ html {
   text-align: center;
   box-sizing: border-box;
   font-size: 62.5%;
-  font-family: 'Amaranth', sans-serif;
+  font-family: "Amaranth", sans-serif;
   background-color: #dce0cb;
 }
 
 body {
   box-sizing: border-box;
-  flex-direction: row;
+  min-height: 100vh;
 }
 
-///////////////////////////////////////////////////// 
+///////////////////////////////////////////////////
+// HEADER
+
+/////////////////////////////////////////////////////
 // APP
+
+// #root {
+//   height: 100%;
+// }
+
+
+.layout {
+  // display: flex;
+  // flex-direction: column;
+  // max-width: 140rem;
+  max-width: 100%;
+  max-height: 100%;
+  // margin: 8rem auto;
+  background-color: #fefefe;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 9rem;
+  background-color: rgb(62, 173, 201);
+}
 
 .container {
   display: flex;
-  max-width: 120rem;
-  margin: 8rem auto;
-  background-color: #a2be25;
-  box-shadow: 0 2rem 6rem rgba(0,0,0,0.3);
-
-  min-height: 50rem;
-
+  // background-color: #bed45a;
+  // min-height: 50rem;
 }
 
 .sidebar {
   background-color: rgb(65, 65, 65);
   flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .content {
   display: flex;
   flex: 1;
-  // height: 80rem;
-  // width: 80%;
-  margin: auto;
+  // margin: auto;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 
+
   .concert {
     position: relative;
-    margin: 1rem 1rem;
+    margin: 2rem 1rem;
     height: 30rem;
-    width: 20rem;
+    width: 25rem;
     border: 3px solid rgb(29, 17, 17);
     background-color: rgb(211, 176, 164);
     padding: 2rem 1rem;
     font-size: 3rem;
+
+    // &:first-child {
+
+    //   margin-top: 0.5rem;
+    // }
 
     span {
       display: block;
@@ -71,20 +99,63 @@ body {
   }
 }
 
-
 ///////////////////////////////////////
 // SIDE NAVIGATION
 
 .side-nav {
-  &__item {
+  font-size: 1.7rem;
+  list-style: none;
+  margin-top: 3.5rem;
 
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
   }
 
-  &__link {
+  &__item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: rgb(173, 72, 212);
+    transform: scaleY(0);
+    // transform-origin: bottom; center is default
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      // .2s - delay
+        background-color 0.1s;
+  }
 
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__item:active::before {
+    background-color: rgb(187, 114, 216);
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: rgb(231, 216, 216);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    position: relative;
+    z-index: 10; // works only if position is specified
   }
 }
 
+.copyleft {
+  display: inline-block;
+  transform: rotate(180deg);
+}
 ///////////////////////////////////////
 // LEGAL TEXT
 .legal {
