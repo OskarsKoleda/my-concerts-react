@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Amaranth', sans-serif;
+  background-color: #dce0cb;
+}
+
+body {
+  box-sizing: border-box;
+  flex-direction: row;
+}
+
+///////////////////////////////////////////////////// 
+// APP
+
+.container {
+  display: flex;
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: #a2be25;
+  box-shadow: 0 2rem 6rem rgba(0,0,0,0.3);
+
+  min-height: 50rem;
+
+}
+
+.sidebar {
+  background-color: rgb(65, 65, 65);
+  flex: 0 0 18%;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  // height: 80rem;
+  // width: 80%;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .concert {
+    position: relative;
+    margin: 1rem 1rem;
+    height: 30rem;
+    width: 20rem;
+    border: 3px solid rgb(29, 17, 17);
+    background-color: rgb(211, 176, 164);
+    padding: 2rem 1rem;
+    font-size: 3rem;
+
+    span {
+      display: block;
+    }
+
+    span.band-name {
+      font-size: 4rem;
+    }
+
+    .btn-remove {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+
+///////////////////////////////////////
+// SIDE NAVIGATION
+
+.side-nav {
+  &__item {
+
+  }
+
+  &__link {
+
+  }
+}
+
+///////////////////////////////////////
+// LEGAL TEXT
+.legal {
+  font-size: 1.2rem;
+  color: #ccc;
+  text-align: center;
+  padding: 2.5rem;
+}

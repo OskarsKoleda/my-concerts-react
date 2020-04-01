@@ -1,0 +1,2 @@
+export const ADD_CONCERT = 'ADD_CONCERT';
+export const REMOVE_CONCERT = 'REMOVE_CONCERT';
