@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import ConcertsPage from './containers/ConcertsPage';
-import Layout from './components/Layout/Layout'
-import './style.scss';
+import Layout from './components/Layout/Layout';
+import HomePage from './containers/HomePage/HomePage'
 
-function App() {
+const app = props => {
+  let routes = (
+    <Switch>
+      <Route path="/visited-concerts" component={ConcertsPage} />
+      <Route path="/" exact component={HomePage} />
+    </Switch>
+  );
   return (
     <div className="layout">
       <Layout>
-        <ConcertsPage/>
+        <Suspense fallback={<p>Loading...</p>}>{routes}</Suspense>
       </Layout>
     </div>
-
   );
-}
+};
 
-export default App;
+export default withRouter(app);

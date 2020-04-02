@@ -51,6 +51,27 @@ const initialState = {
       place: 'Krakow',
       price: 15,
       date: '20.01.2019'
+    },
+    {
+      id: 8,
+      name: 'Eluveitie',
+      place: 'Riga',
+      price: 20,
+      date: '11.05.2015'
+    },
+    {
+      id: 9,
+      name: 'Mystic Festival',
+      place: 'Krakow',
+      price: 90,
+      date: '24.06.2019'
+    },
+    {
+      id: 10,
+      name: 'Neuromonakh Feofan',
+      place: 'Krakow',
+      price: 15,
+      date: '20.01.2019'
     }
   ]
 };

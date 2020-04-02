@@ -1,7 +1,7 @@
 import React from "react";
 
 import { connect } from "react-redux";
-import Concert from "../../components/Concert/Concert";
+import ConcertCard from "../../components/Concert/ConcertCard";
 import * as actionTypes from "../../store/actions/actionTypes";
 
 const concertsList = props => {
@@ -12,7 +12,7 @@ const concertsList = props => {
     concerts = <div>You don't have any concerts!</div>;
   } else {
     concerts = props.concerts.map(con => (
-      <Concert
+      <ConcertCard
         key={con.id}
         name={con.name}
         place={con.place}

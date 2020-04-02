@@ -1,20 +1,20 @@
-import React from "react";
-import NavigationItem from "./NavigationItem/NavigationItem";
+import React from 'react';
+import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = props => {
   return (
     <nav className="sidebar">
       <ul className="side-nav">
-        <NavigationItem classes={"side-nav__item--active"}>  
+        <NavigationItem link="/books">
           <span>Books</span>
         </NavigationItem>
-        <NavigationItem>
+        <NavigationItem link="/visited-concerts">
           <span>Visited Concerts</span>
         </NavigationItem>
-        <NavigationItem>
+        <NavigationItem link="/information">
           <span>Information</span>
         </NavigationItem>
-        <NavigationItem>
+        <NavigationItem link="/about">
           <span>About</span>
         </NavigationItem>
       </ul>
