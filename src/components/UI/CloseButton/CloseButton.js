@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const closeButton = props => {
   return (
-    <span onClick={props.clicked} className="btn-close">
-      &times;
-    </span>
+    <button onClick={props.clicked} className="close-button">
+      Remove
+    </button>
   );
 };
 

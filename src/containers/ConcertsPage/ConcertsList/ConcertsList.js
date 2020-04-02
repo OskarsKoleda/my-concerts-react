@@ -1,8 +1,8 @@
 import React from "react";
 
 import { connect } from "react-redux";
-import ConcertCard from "../../components/Concert/ConcertCard";
-import * as actionTypes from "../../store/actions/actionTypes";
+import ConcertCard from "../../../components/Concert/ConcertCard";
+import * as actionTypes from "../../../store/actions/actionTypes";
 
 const concertsList = props => {
   let concerts;

@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import ConcertsPage from './containers/ConcertsPage';
+import ConcertsPage from './containers/ConcertsPage/ConcertsPage';
 import Layout from './components/Layout/Layout';
 import HomePage from './containers/HomePage/HomePage'
 

@@ -73,7 +73,10 @@ body {
   overflow: auto;
 
   .concert {
-    position: relative;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 1rem 1rem;
     height: 30rem;
     width: 25rem;
@@ -130,14 +133,19 @@ body {
   }
 
   &__item:active::before {
-    background-color: rgb(187, 114, 216);
+    background-color: rgb(125, 44, 156)
   }
 
-  &__item:hover::before,
+  &__item:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
   &__item--active::before {
     transform: scaleY(1);
     width: 100%;
   }
+
 
   &__link:link,
   &__link:visited {

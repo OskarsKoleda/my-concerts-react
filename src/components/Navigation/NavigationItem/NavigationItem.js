@@ -1,16 +1,12 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const navigationItem = props => {
-  // const activeClass = props.classes;
-  // const classes = ['side-nav__item'];
-  // classes.push(activeClass);
   return (
-    <li className={'side-nav__item'}>
+    <li className={props.classes.join(" ")}>
       <NavLink
         exact
-        className={'side-nav__link'}
-        activeClassName={'side-nav__item--active'}
+        className={"side-nav__link"}
         to={props.link}
       >
         {props.children}
