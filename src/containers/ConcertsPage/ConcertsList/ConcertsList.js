@@ -1,26 +1,31 @@
-import React from "react";
+import React from 'react';
 
-import { connect } from "react-redux";
-import ConcertCard from "../../../components/Concert/ConcertCard";
-import * as actionTypes from "../../../store/actions/actionTypes";
+import { connect } from 'react-redux';
+import ConcertCard from '../../../components/Concert/ConcertCard';
+import * as actionTypes from '../../../store/actions/actionTypes';
 
 const concertsList = props => {
   let concerts;
+  concerts = props.concerts.filter(c =>
+    c.name.toLowerCase().includes(props.filterValue.toLowerCase())
+  );
 
-  if (props.concerts.length === 0) {
-    console.log("I AM HERE");
-    concerts = <div>You don't have any concerts!</div>;
+  if (concerts.length === 0) {
+    concerts = <div>No concerts!</div>;
   } else {
-    concerts = props.concerts.map(con => (
-      <ConcertCard
-        key={con.id}
-        name={con.name}
-        place={con.place}
-        price={con.price}
-        date={con.date}
-        removeConcert={() => props.onConcertRemoved(con.id)}
-      />
-    ));
+    concerts = concerts.map(con => {
+      return (
+        <ConcertCard
+          key={con.id}
+          name={con.name}
+          place={con.place}
+          price={con.price}
+          date={con.date}
+          src={con.img}
+          removeConcert={() => props.onConcertRemoved(con.id)}
+        />
+      );
+    });
   }
 
   return <div className="content">{concerts}</div>;

@@ -7,7 +7,7 @@ const layout = props => (
     <Header />
     <div className="container">
       <Navigation />
-      <main>{props.children}</main>
+      <main className="main-content">{props.children}</main>
     </div>
   </>
 );
